@@ -1,11 +1,25 @@
-version: "3.7"
+version: '3.7'
 
 services:
   app:
-    container_name: vicllen-api
-    build: .
+    container_name: vicllen-app
+    build: 
+      context: .
+      dockerfile: ./.docker/app/Dockerfile
     volumes:
-      - ".:/api"
+      - "./app:/app"
+      - "/app/node_modules"
+    ports:
+      - "3001:3000"
+    environment:
+      - NODE_ENV=development
+  api:
+    container_name: vicllen-api
+    build: 
+      context: .
+      dockerfile: ./.docker/api/Dockerfile
+    volumes:
+      - "./api:/api"
       - "/api/node_modules"
     ports:
       - "3002:3000"
