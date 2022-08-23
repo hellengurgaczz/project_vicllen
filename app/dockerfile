@@ -1,0 +1,12 @@
+FROM node:16.17-alpine3.16
+
+WORKDIR /app
+
+COPY package.json .
+COPY package-lock.json .
+
+RUN npm install
+
+RUN chown -R node /app/node_modules
+
+CMD ["npm", "start"]
