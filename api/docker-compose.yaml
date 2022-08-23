@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+  app:
+    container_name: vicllen-api
+    build: .
+    volumes:
+      - ".:/api"
+      - "/api/node_modules"
+    ports:
+      - "3002:3000"
+    environment:
+      - NODE_ENV=development
+
+  database:
+    image: mongo
+    container_name: vicllen-db
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: argentina
+      MONGO_INITDB_DATABASE: vicllen
