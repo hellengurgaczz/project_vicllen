@@ -1,6 +1,6 @@
 # [Vicllen](https://github.com/hellengurgaczz/project_vicllen) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/main/LICENSE)
 
-O projeto Vicllen consiste numa versão do spotify utilizando as seguintes tecnologia
+O projeto Vicllen consiste numa versão do spotify utilizando as seguintes tecnologias
 
 - **API**
     - Node.js
